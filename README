@@ -1,0 +1,34 @@
+# Projeto PHP-FPM com Docker usando Alpine 3.14
+
+Projeto que utiliza Docker, Alpine 3.14 e PHP-FPM para criar um ambiente PHP!
+
+## Descrição
+
+Este projeto demonstra como configurar um ambiente PHP-FPM usando a imagem Alpine 3.14 no Docker. Ele oferece um ponto de partida para executar aplicativos PHP no contêiner Docker usando o PHP-FPM.
+
+## Pré-requisitos
+
+Certifique-se de ter o Docker instalado na sua máquina antes de prosseguir.
+
+## Como Usar
+
+1. Clone este repositório para a sua máquina local:
+
+
+git clone https://github.com/jhonatan-github/imagem-php-fpm-docker.git
+
+Copie seus arquivos PHP para o diretório src.
+
+Construa a imagem Docker e execute o contêiner:
+
+docker build -t nome-da-imagem-php-fpm .
+docker run -d -p 9000:9000 --name nome-do-container-php-fpm nome-da-imagem-php-fpm
+
+Agora você pode configurar um servidor web (como Nginx) para encaminhar solicitações PHP para o PHP-FPM em localhost:9000.
+
+Estrutura do Projeto
+Dockerfile: Arquivo de instruções para construir a imagem Docker.
+src/: Diretório onde você deve colocar seus arquivos PHP.
+
+Contribuição
+Se você quiser contribuir para este projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
